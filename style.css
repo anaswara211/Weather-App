@@ -1,0 +1,106 @@
+
+body {
+    background: url('assets/bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.blur-card {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.208); 
+    border-radius: 20px;
+    height: 630px;
+    padding: 20px;
+    width: 400px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.input-group {
+    background: rgba(0,0, 0, 0.2);
+    border: none;
+    border-radius: 30px;
+    border-color: none;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 248, 248, 0.75);
+}
+
+
+ .forecast-items-container{
+    gap: 15px;
+    overflow-x: scroll; 
+}
+
+.forecast-items-container::-webkit-scrollbar {
+    height: 8px;
+}
+.forecast-items-container::-webkit-scrollbar-corner {
+    background: rgb(0, 0, 0, 0.1);
+    border-radius: 99px;
+}
+.forecast-items-container::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0, 0.15);
+    border-radius: 99px;
+}
+
+
+.forecast-item {
+    min-width: 70px;
+    background: rgb(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* gap: 6px; */
+    /* padding: 10px; */
+     align-items: center;
+    border-radius: 12px;
+    transition: 0.3s background;
+}
+.forecast-item:hover {
+    background: rgb(255, 255, 255, 0.15);
+}
+.forecast-item-img {
+    width: 40px;
+    height: 50px;
+} 
+
+.row .humidity,
+.row .wind{
+display: flex;
+align-items: center;
+width : 50%;
+}
+
+.row .humidity{
+padding-left: 20px;
+justify-content: start;
+}
+
+.row .wind{
+    padding-right: 20px;
+    justify-content: end;
+}
+
+.row i {
+    font-size: 46px;
+    margin-right: 10px;
+}
+
