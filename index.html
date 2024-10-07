@@ -67,7 +67,7 @@
             await fetchWeatherByCity(userInput);
         }
     }
-    const apiKey = '6e8a895d879ebfce39c19d7adc989ba3' // Paste here your API key
+    const apiKey = '' // Paste here your API key
 
     const fetchWeatherByCity = async (city) => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey}&units=metric`);
